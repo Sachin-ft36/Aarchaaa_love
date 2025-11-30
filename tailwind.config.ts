@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        handwriting: ["Dancing Script", "cursive"],
+        sans: ["Inter", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "medical-blue": "hsl(var(--medical-blue))",
+        "medical-blue-light": "hsl(var(--medical-blue-light))",
+        "blush-pink": "hsl(var(--blush-pink))",
+        "blush-pink-dark": "hsl(var(--blush-pink-dark))",
+        "soft-white": "hsl(var(--soft-white))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +89,39 @@ export default {
             height: "0",
           },
         },
+        "heartbeat": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "petal-fall": {
+          "0%": { 
+            transform: "translateY(-100vh) rotate(0deg)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100vh) rotate(360deg)",
+            opacity: "0"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "heartbeat": "heartbeat 1.5s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
+        "petal-fall": "petal-fall 4s linear forwards",
+      },
+      backdropBlur: {
+        xs: "2px",
       },
     },
   },
