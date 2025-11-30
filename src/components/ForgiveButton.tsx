@@ -45,9 +45,26 @@ const ForgiveButton = () => {
     setTimeout(() => setShowPetals(false), 5000);
   };
 
+  const handleScreenClick = () => {
+    if (isClicked) {
+      setShowPetals(true);
+      setTimeout(() => setShowPetals(false), 5000);
+    }
+  };
+
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto max-w-2xl text-center">
+    <>
+      {/* Full-screen click overlay */}
+      {isClicked && (
+        <div 
+          onClick={handleScreenClick}
+          className="fixed inset-0 z-40 cursor-pointer"
+          aria-label="Click anywhere to see rose petals"
+        />
+      )}
+      
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30 relative z-10">
+        <div className="container mx-auto max-w-2xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,13 +133,14 @@ const ForgiveButton = () => {
           {showPetals && (
             <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
               {Array.from({ length: 50 }).map((_, i) => (
-                <RosePetal key={i} delay={i * 0.1} />
+                <RosePetal key={`petal-${Date.now()}-${i}`} delay={i * 0.1} />
               ))}
             </div>
           )}
         </AnimatePresence>
       </div>
     </section>
+    </>
   );
 };
 
