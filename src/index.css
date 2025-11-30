@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 30% 20%;
 
-    --primary: 210 70% 60%;
+    --primary: 340 82% 62%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 340 80% 85%;
-    --secondary-foreground: 340 60% 30%;
+    --secondary: 267 57% 78%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 210 20% 50%;
 
-    --accent: 340 70% 70%;
+    --accent: 199 89% 68%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,22 +34,25 @@ All colors MUST be HSL.
 
     --border: 210 30% 90%;
     --input: 210 30% 90%;
-    --ring: 210 70% 60%;
+    --ring: 340 82% 62%;
 
     --radius: 1rem;
     
-    --medical-blue: 210 70% 60%;
-    --medical-blue-light: 210 60% 75%;
-    --blush-pink: 340 80% 85%;
-    --blush-pink-dark: 340 70% 70%;
+    --medical-blue: 199 89% 68%;
+    --medical-blue-light: 199 89% 88%;
+    --blush-pink: 340 82% 88%;
+    --blush-pink-dark: 340 82% 62%;
+    --lavender: 267 57% 78%;
+    --lavender-light: 267 57% 92%;
     --soft-white: 0 0% 98%;
     
     --gradient-healing: linear-gradient(135deg, hsl(210 60% 75% / 0.2), hsl(340 70% 85% / 0.2));
     --glass-bg: hsl(0 0% 100% / 0.6);
     --glass-border: hsl(0 0% 100% / 0.8);
     
-    --shadow-soft: 0 8px 32px hsl(210 70% 60% / 0.1);
-    --shadow-glow: 0 0 40px hsl(340 70% 70% / 0.3);
+    --shadow-soft: 0 8px 32px hsl(340 82% 62% / 0.2);
+    --shadow-glow: 0 0 40px hsl(340 82% 62% / 0.5);
+    --shadow-glow-blue: 0 0 40px hsl(199 89% 68% / 0.4);
     
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
