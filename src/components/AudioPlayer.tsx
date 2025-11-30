@@ -38,7 +38,8 @@ const AudioPlayer = () => {
               className="w-full"
               controlsList="nodownload"
             >
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+              {/* Updated source path here */}
+              <source src="/Aarcha.mp3" type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
 
